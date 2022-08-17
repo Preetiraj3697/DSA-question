@@ -70,28 +70,28 @@ function spiralTraversalIV(N, arr){
   let bag="";
   while(count<N*N){
   for(i=bottom; i>=top; i--){
-      bag+=(arr[i][right])+" ";
+      bag+=(arr[i][right])+" ";  //9,6,3
         count++;
   }
   right--;
   for(i=right; i>=left; i--){
-      bag+=(arr[top][i])+" ";
+      bag+=(arr[top][i])+" ";   //2,1
         count++;
   }
   top++;
   for(i=top; i<=bottom; i++){
-      bag+=(arr[i][left])+" ";
+      bag+=(arr[i][left])+" ";  //4,7
       count++;
   }
   left++;
   for(i=left; i<=right; i++){
-      bag+=(arr[bottom][i])+" ";
+      bag+=(arr[bottom][i])+" "; //8
       count++;
   }
-  bottom--;
+  bottom--;  //5
    
 }
-  console.log(bag);
+  console.log(bag);   //9,6,3,2,1,4,7,8,5
 }
 
 let N=3;
